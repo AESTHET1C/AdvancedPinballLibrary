@@ -1,16 +1,17 @@
-# Trinket Pinball
-### Trinket Pro Library for EWM Arduino camp
-Eli Baum, 2016
+# Advanced Pinball Library
+### Advanced API for the Eli Whitney Museum Arduino-powered pinball machine.
+Alex Tavares / Eli Baum 2016
 
-This libary serves to simplify many of the common tasks that campers will use to control their pinball games. The intention is to allow users to learn useful concepts without getting bogged down with the technicalities of the Arduino system.
+The *TrinketPinball* libary (from which this library is derived) serves to simplify many of the common tasks that campers can  use to control their pinball games, such as easy access to reading sensors, setting LEDs, and adjusting motor speed. The intention is to allow users to learn useful concepts without getting bogged down with the technicalities of the Arduino system. *AdvancedPinballLibrary* (*APL*) builds upon this library, adding advanced features for campers who wish to further add to their machines' code on their own time as they become more capable programmers. Such features include speaker polyphony, extended 7-segment display access and control, and generally improved support for asynchronous operation. It is assumed that the user of this library is reasonably comfortable with coding practices, and as such, these features may be less immediately intuitive to use.
+
+For additional help with programming and the Arduino environment, consult the documentation for the *TrinketPinball* library at <https://git.io/v6ewO>
 
 ## Installation
+TODO: Update this
 Download this repository as a zip and rename the folder `ewm`. Then move that folder into your Arduino sketchbook's `libraries` folder. To use in a sketch, select the library from **Sketch** > **Include Library**.
 
 ## API
-The pinball API includes functions for controlling the speaker, DC motor, servo motor, 7-segment displays, and internal EEPROM. Most campers shouldn't need to stray too far from this functionality.
-
-Most library components contain *public-facing functions*, intended for use by campers, as well as other advanced-use (but still technically public) functions.
+The *APL* API includes functions for controlling the speaker, DC motor, servo motor, 7-segment displays, and internal EEPROM. In this readme file, functions that are shared with the original TrinketPinball library are optionally labeled as *basic* functions. Additional functions are labeled as *advanced*.
 
 `void initPinball()` – set up all necessary peripherals. It must be called as the first line of `void setup()` in every sketch that uses the library.
 
@@ -31,10 +32,11 @@ The servo library allows for 256-position control of the servo motor with timing
 `void setServo(byte pos)` – move the servo to the specified location (0 - 255).
 
 ### 7-segment Display
-Three 7-segment displays, loaded via shift registers, allow users to display numbers and other characters on their pinball machine.
+Three 7-segment displays, loaded via shift registers from left to right, allow users to display numbers and other characters on their pinball machine. By default, the decimal points are treated as part of the individual digits. By enabling *advancedDisplay* mode, the decimal points are treated independently of the digits on screen, and will override any decimal points set by the standard display functions.
 
 #### Standard Methods
-`void displayNumber(int n)` – display a number (with leading zeros). Numbers that can't fit on the display will be replaced with either "bIg" or "neg".
+`void displayNumber(int n)` – display a number (with leading zeros). Numbers that can't fit on the display will be replaced with either "bIG" or "NEG".
+TODO: Change displayNumber() capitalization
 
 `void displayText(char text[], int delayTime)` – display an ascii string up to length 256. Displayed string is case-sensitive.
 
@@ -75,7 +77,7 @@ The library uses EEPROM to store the high score and game count. By default, thes
 `void clearGameCount()` – set the game count to zero.
 
 ### Motor
-PWM allows for 256-speed control of the DC motor. It should not be driven at full speed under normal conditions. Doing so may result in greatly reduced motor life.
+Ultrasonic PWM allows for 256-speed control of the DC motor. It should not be driven at full speed under normal conditions. Doing so may result in greatly reduced motor life.
 
 #### Standard Methods
 `void setMotorSpeed(int speedPercent)` – set the motor speed as a percent. Note that this function scales output according to the constant `MAX_SPEED`, i.e. `motorSpeed(100)` sets the motor speed to `MAX_SPEED`.

@@ -1,11 +1,11 @@
 /* ewm.h
  *
- * Library for Eli Whitney Arduino camp 2016
- * Eli Baum
+ * Advanced API for the Eli Whitney Museum Arduino-powered pinball machine.
+ * Eli Baum / Alex Tavares
  */
 
-#ifndef ewm_h
-#define emw_h
+#ifndef apl_h
+#define apl_h
 
 #include <Arduino.h>
 

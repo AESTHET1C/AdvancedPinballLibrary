@@ -1,10 +1,10 @@
-/* ewm.h
+/* apl.h
  *
- * Library for Eli Whitney Arduino camp 2016
- * Eli Baum
+ * Advanced API for the Eli Whitney Museum Arduino-powered pinball machine.
+ * Eli Baum / Alex Tavares
  */
 
-#include "ewm.h"
+#include "apl.h"
 
 /* === initPinball ===
  *
@@ -12,7 +12,7 @@
  */
 void initPinball()
 {
-	/* Peripheral initiation */
+	// Peripheral initiation
 	initTiming();
 
 	init7seg();
@@ -20,7 +20,7 @@ void initPinball()
 	initMotor();
 	initSpeaker();
 
-	/* Other pins */
+	// Other pins
 	pinMode(BUMP_0_LED, OUTPUT);
 	pinMode(BUMP_1_LED, OUTPUT);
 	pinMode(BUMP_2_LED, OUTPUT);
