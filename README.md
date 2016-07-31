@@ -13,7 +13,6 @@ The *TrinketPinball* libary (from which this library is derived) serves to simpl
 For additional help with programming and the Arduino environment, consult the documentation for the *TrinketPinball* library at <https://git.io/v6ewO>
 
 ## Installation
-TODO: Update this
 Download this repository as a zip file (green **Clone or download** button, then **Download ZIP**). From within the Arduino IDE, select the downloaded file with **Sketch** > **Include Library** > **Add .ZIP Library...**. To use in a sketch, select the library from **Sketch** > **Include Library**.
 
 ## API
