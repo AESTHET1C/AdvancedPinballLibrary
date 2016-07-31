@@ -4,33 +4,42 @@
 ### Functions
 initPinball	KEYWORD2
 
-clearHighScore	KEYWORD2
-updateHighScore	KEYWORD2
 readHighScore	KEYWORD2
-clearGameCount	KEYWORD2
+updateHighScore	KEYWORD2
+clearHighScore	KEYWORD2
 readGameCount	KEYWORD2
 updateGameCount	KEYWORD2
+clearGameCount	KEYWORD2
 
-initMotor	KEYWORD2
+initMotor	KEYWORD1
 setMotorSpeed	KEYWORD2
-setMotorSpeedPWM	KEYWORD2
 
 initServo	KEYWORD2
 servoUp	KEYWORD2
 servoDown	KEYWORD2
 setServo	KEYWORD2
 
-init7seg	KEYWORD2
+init7seg	KEYWORD1
 displayNumber	KEYWORD2
 displayText	KEYWORD2
-displayBytes	KEYWORD2
 clearDisplay	KEYWORD2
+displayBytes	KEYWORD2
+getNumberByte	KEYWORD2
+getCharByte	KEYWORD2
+setDisplayByte	KEYWORD2
+displayTextAsync	KEYWORD2
+getTextStatus	KEYWORD2
+setDisplayAutoRefresh	KEYWORD2
+setDisplayMode	KEYWORD2
+displayDecimal	KEYWORD2
+setDisplayDecimals	KEYWORD2
 
-initSpeaker	KEYWORD2
-setSpeaker	KEYWORD2
-setSpeakerVolume	KEYWORD2
+initSpeaker	KEYWORD1
 tone	KEYWORD2
+setSpeakerVolume	KEYWORD2
 speakerOff	KEYWORD2
+setSpeaker	KEYWORD2
+setChannelVolume	KEYWORD2
 
 ### Literals
 BUMP_0_LED	LITERAL1
