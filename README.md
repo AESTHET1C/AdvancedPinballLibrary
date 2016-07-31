@@ -1,14 +1,20 @@
+#NOTE: Unfinished API
+**This libary is in active development, and is not currently in a working state.**
+API calls may be renamed, and features may be missing and/or broken. Please use the *TrinketPinball* library in the meantime, which can be downloaded at <https://git.io/v6ewO>.
+
+--
+
 # Advanced Pinball Library
 ### Advanced API for the Eli Whitney Museum Arduino-powered pinball machine.
 Alex Tavares / Eli Baum 2016
 
-The *TrinketPinball* libary (from which this library is derived) serves to simplify many of the common tasks that campers can  use to control their pinball games, such as easy access to reading sensors, setting LEDs, and adjusting motor speed. The intention is to allow users to learn useful concepts without getting bogged down with the technicalities of the Arduino system. *AdvancedPinballLibrary* (*APL*) builds upon this library, adding advanced features for campers who wish to further add to their machines' code on their own time as they become more capable programmers. Such features include speaker polyphony, extended 7-segment display access and control, and generally improved support for asynchronous operation. It is assumed that the user of this library is reasonably comfortable with coding practices, and as such, these features may be less immediately intuitive to use.
+The *TrinketPinball* libary (from which this library is derived) serves to simplify many of the common tasks that campers can  use to control their pinball games, such as easy access to reading sensors, setting LEDs, and adjusting motor speed. The intention is to allow campers to learn useful concepts without getting bogged down with the technicalities of the Arduino system. *AdvancedPinballLibrary* (*APL*) builds upon this library, adding advanced features for campers who wish to further add to their machines' code on their own time as they become more capable programmers. Such features include speaker polyphony, extended 7-segment display access and control, and generally improved support for asynchronous operation. It is assumed that the user of this library is reasonably comfortable with coding practices, and as such, these features may be less immediately intuitive to use.
 
 For additional help with programming and the Arduino environment, consult the documentation for the *TrinketPinball* library at <https://git.io/v6ewO>
 
 ## Installation
 TODO: Update this
-Download this repository as a zip and rename the folder `ewm`. Then move that folder into your Arduino sketchbook's `libraries` folder. To use in a sketch, select the library from **Sketch** > **Include Library**.
+Download this repository as a zip file (green **Clone or download** button, then **Download ZIP**). From within the Arduino IDE, select the downloaded file with **Sketch** > **Include Library** > **Add .ZIP Library...**. To use in a sketch, select the library from **Sketch** > **Include Library**.
 
 ## API
 The *APL* API includes functions for controlling the speaker, DC motor, servo motor, 7-segment displays, and internal EEPROM. In this readme file, functions that are shared with the original TrinketPinball library are optionally labeled as *basic* functions. Additional functions are labeled as *advanced*.
