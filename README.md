@@ -1,6 +1,7 @@
-#NOTE: Unfinished API
-**This libary is in active development, and is not currently in a working state.**
-Functions may be renamed, reworked, or removed in future updates. Certain features may be missing or broken. Please use the *TrinketPinball* library in the meantime, which can be found at <https://git.io/v6ewO>.
+# NOTE: Abandoned API
+Despite never working on this library in the first place, it is now officially dead. Ideas from this API will be used in the development of the Backglass 2 Library, which can be found here: <https://github.com/AESTHET1C/Backglass-2-Library/> [INCOMPATIBLE WITH THE ORIGINAL BACKGLASS BOARD].
+
+For users of the original Backglass board, please use the *TrinketPinball* library, which can be found here: <https://github.com/elimbaum/TrinketPinball/>.
 
 --
 
